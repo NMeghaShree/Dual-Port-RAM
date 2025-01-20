@@ -20,37 +20,35 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module dual_port_RAM(
-    // Two sets of address and data buses
-    input rst,                     // Reset signal
-    input [7:0] data_a, data_b,    // 8-bit data buses a and b
-    input [5:0] addr_a, addr_b,    // 6-bit address buses a and b
-    input we_a, we_b,              // Write enable for ports a and b
-    input clk,                     // Clock signal
-    output reg [7:0] q_a, q_b      // Output data for ports a and b
+module dual_port_ram(
+    input rst,                     
+    input [7:0] data_a, data_b,    
+    input [5:0] addr_a, addr_b,    
+    input we_a, we_b,              
+    input clk,                     
+    output reg [7:0] q_a, q_b     
     );
 
-    reg [7:0] RAM[63:0];           // 64 x 8-bit RAM
+    reg [7:0] RAM[63:0];          
 
     always @(posedge clk) begin
         if (rst) begin
-            q_a <= 8'b0;           // Reset output for port A
+            q_a <= 8'b0;          
         end else if (we_a) begin
-            RAM[addr_a] <= data_a; // Write operation for port A
+            RAM[addr_a] <= data_a; 
         end else begin
-            q_a <= RAM[addr_a];    // Read operation for port A
+            q_a <= RAM[addr_a];   
         end
     end
 
     always @(posedge clk) begin
         if (rst) begin
-            q_b <= 8'b0;           // Reset output for port B
+            q_b <= 8'b0;           
         end else if (we_b) begin
-            RAM[addr_b] <= data_b; // Write operation for port B
+            RAM[addr_b] <= data_b; 
         end else begin
-            q_b <= RAM[addr_b];    // Read operation for port B
+            q_b <= RAM[addr_b];    
         end
     end
 
 endmodule
-
