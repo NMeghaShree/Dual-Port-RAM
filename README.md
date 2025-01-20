@@ -5,7 +5,8 @@ The signals utilized are:-
 clock, write enable(negation of write enable used as read enable), 2 output data buses, 2 input data buses and 2 address buses.    
 
 The schematic obtained is as follows:-  
-![schem](https://github.com/user-attachments/assets/613d43f8-fc9d-4a98-9319-82816f322936)  
+![new1](https://github.com/user-attachments/assets/4ab6f359-c02f-4d2a-af80-da5dc2446321)  
 
 The waveform for verification is obtained:-  
-![wvfrm](https://github.com/user-attachments/assets/f0c5885b-6cc2-49a1-bef3-ebab69ac0df3)
+![newjdhkf](https://github.com/user-attachments/assets/06931f51-3d64-4539-b438-816b0e4c4112)
+
