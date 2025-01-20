@@ -21,7 +21,7 @@
 
 
 module dual_port_RAM_tb();
-    
+    reg rst;
     reg [7:0] data_a, data_b;  
     reg [5:0] addr_a, addr_b;  
     reg we_a, we_b;       
@@ -30,7 +30,7 @@ module dual_port_RAM_tb();
     
     dual_port_ram DUT(
     .data_a(data_a),
-    
+    .rst(rst),
     .data_b(data_b), 
     .addr_a(addr_a),
     .addr_b(addr_b),  
@@ -46,11 +46,15 @@ module dual_port_RAM_tb();
         
         forever #20 clk=~clk;
     end
-    
+    initial begin
+     rst=1'b1;
+     #50; rst=1'b0;
+    end
     initial
     begin
     //writing data into memory through port a and b at time=0ns
         $monitor("the data in the memory from port a:%0d and from port b:%0d at time :%0d", q_a, q_b, $time);
+       
         data_a=8'h55;
         addr_a=6'h01;
         
@@ -72,3 +76,4 @@ module dual_port_RAM_tb();
         $stop;
     end
 endmodule
+
