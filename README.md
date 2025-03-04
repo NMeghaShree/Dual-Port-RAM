@@ -13,4 +13,13 @@ The waveform for verification is obtained:-
 Post-Synthesis Functional Verification:-
 ![image](https://github.com/user-attachments/assets/858d4897-3289-4640-805f-696055712d45)
 
+Synthesis of Dual Port RAM in FPGA(Basys3 rev B board):-
+![image](https://github.com/user-attachments/assets/e4008880-bb9e-4da0-b3b6-b136276c88b7)
+
+ FPGA estimated resource usage :-
+ ![image](https://github.com/user-attachments/assets/bd0dd3a5-6b0e-45ff-a77e-ff91dab18563)
+
+
+
+
 
