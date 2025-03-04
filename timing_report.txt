@@ -1,0 +1,775 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Wed Mar  5 01:26:49 2025
+| Host         : LAPTOP-4RT27HEF running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 -file E:/vivadofilesmeg/project_27/timing_report.txt
+| Design       : dual_port_sync_ram
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (20)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (62)
+5. checking no_input_delay (27)
+6. checking no_output_delay (16)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (20)
+-------------------------
+ There are 20 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+RAM_reg/CLKARDCLK
+RAM_reg/CLKBWRCLK
+q_a_OBUFT[0]_inst_i_2/C
+q_a_OBUFT[1]_inst_i_2/C
+q_a_OBUFT[2]_inst_i_2/C
+q_a_OBUFT[3]_inst_i_2/C
+q_a_OBUFT[4]_inst_i_2/C
+q_a_OBUFT[5]_inst_i_2/C
+q_a_OBUFT[6]_inst_i_2/C
+q_a_OBUFT[7]_inst_i_3/C
+q_a_OBUFT[7]_inst_i_4/C
+q_b_OBUFT[0]_inst_i_2/C
+q_b_OBUFT[1]_inst_i_2/C
+q_b_OBUFT[2]_inst_i_2/C
+q_b_OBUFT[3]_inst_i_2/C
+q_b_OBUFT[4]_inst_i_2/C
+q_b_OBUFT[5]_inst_i_2/C
+q_b_OBUFT[6]_inst_i_2/C
+q_b_OBUFT[7]_inst_i_3/C
+q_b_OBUFT[7]_inst_i_4/C
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (62)
+-------------------------------------------------
+ There are 62 pins that are not constrained for maximum delay. (HIGH)
+
+RAM_reg/ADDRARDADDR[4]
+RAM_reg/ADDRARDADDR[5]
+RAM_reg/ADDRARDADDR[6]
+RAM_reg/ADDRARDADDR[7]
+RAM_reg/ADDRBWRADDR[4]
+RAM_reg/ADDRBWRADDR[5]
+RAM_reg/ADDRBWRADDR[6]
+RAM_reg/ADDRBWRADDR[7]
+RAM_reg/DIADI[0]
+RAM_reg/DIADI[1]
+RAM_reg/DIADI[2]
+RAM_reg/DIADI[3]
+RAM_reg/DIADI[4]
+RAM_reg/DIADI[5]
+RAM_reg/DIADI[6]
+RAM_reg/DIADI[7]
+RAM_reg/DIBDI[0]
+RAM_reg/DIBDI[1]
+RAM_reg/DIBDI[2]
+RAM_reg/DIBDI[3]
+RAM_reg/DIBDI[4]
+RAM_reg/DIBDI[5]
+RAM_reg/DIBDI[6]
+RAM_reg/DIBDI[7]
+RAM_reg/WEA[0]
+RAM_reg/WEA[1]
+RAM_reg/WEBWE[0]
+RAM_reg/WEBWE[1]
+q_a_OBUFT[0]_inst_i_2/CE
+q_a_OBUFT[0]_inst_i_2/D
+q_a_OBUFT[1]_inst_i_2/CE
+q_a_OBUFT[1]_inst_i_2/D
+q_a_OBUFT[2]_inst_i_2/CE
+q_a_OBUFT[2]_inst_i_2/D
+q_a_OBUFT[3]_inst_i_2/CE
+q_a_OBUFT[3]_inst_i_2/D
+q_a_OBUFT[4]_inst_i_2/CE
+q_a_OBUFT[4]_inst_i_2/D
+q_a_OBUFT[5]_inst_i_2/CE
+q_a_OBUFT[5]_inst_i_2/D
+q_a_OBUFT[6]_inst_i_2/CE
+q_a_OBUFT[6]_inst_i_2/D
+q_a_OBUFT[7]_inst_i_3/D
+q_a_OBUFT[7]_inst_i_4/CE
+q_a_OBUFT[7]_inst_i_4/D
+q_b_OBUFT[0]_inst_i_2/CE
+q_b_OBUFT[0]_inst_i_2/D
+q_b_OBUFT[1]_inst_i_2/CE
+q_b_OBUFT[1]_inst_i_2/D
+q_b_OBUFT[2]_inst_i_2/CE
+q_b_OBUFT[2]_inst_i_2/D
+q_b_OBUFT[3]_inst_i_2/CE
+q_b_OBUFT[3]_inst_i_2/D
+q_b_OBUFT[4]_inst_i_2/CE
+q_b_OBUFT[4]_inst_i_2/D
+q_b_OBUFT[5]_inst_i_2/CE
+q_b_OBUFT[5]_inst_i_2/D
+q_b_OBUFT[6]_inst_i_2/CE
+q_b_OBUFT[6]_inst_i_2/D
+q_b_OBUFT[7]_inst_i_3/D
+q_b_OBUFT[7]_inst_i_4/CE
+q_b_OBUFT[7]_inst_i_4/D
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (27)
+-------------------------------
+ There are 27 input ports with no input delay specified. (HIGH)
+
+addr_a[0]
+addr_a[1]
+addr_a[2]
+addr_a[3]
+addr_b[0]
+addr_b[1]
+addr_b[2]
+addr_b[3]
+cs
+data_a[0]
+data_a[1]
+data_a[2]
+data_a[3]
+data_a[4]
+data_a[5]
+data_a[6]
+data_a[7]
+data_b[0]
+data_b[1]
+data_b[2]
+data_b[3]
+data_b[4]
+data_b[5]
+data_b[6]
+data_b[7]
+we_a
+we_b
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (16)
+--------------------------------
+ There are 16 ports with no output delay specified. (HIGH)
+
+q_a[0]
+q_a[1]
+q_a[2]
+q_a[3]
+q_a[4]
+q_a[5]
+q_a[6]
+q_a[7]
+q_b[0]
+q_b[1]
+q_b[2]
+q_b[3]
+q_b[4]
+q_b[5]
+q_b[6]
+q_b[7]
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                   78          inf        0.000                      0                   78           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay            78 Endpoints
+Min Delay            78 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 RAM_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            q_a[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.756ns  (logic 6.156ns (79.377%)  route 1.599ns (20.623%))
+  Logic Levels:           3  (LUT3=1 OBUFT=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  RAM_reg/CLKARDCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[1])
+                                                      2.454     2.454 r  RAM_reg/DOADO[1]
+                         net (fo=2, unplaced)         0.800     3.254    RAM_reg_n_14
+                                                                      r  q_a_OBUFT[1]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.150     3.404 r  q_a_OBUFT[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.203    q_a_OBUF[1]
+                                                                      r  q_a_OBUFT[1]_inst/I
+                         OBUFT (Prop_obuft_I_O)       3.552     7.756 r  q_a_OBUFT[1]_inst/O
+                         net (fo=0)                   0.000     7.756    q_a[1]
+                                                                      r  q_a[1] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RAM_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            q_a[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.756ns  (logic 6.156ns (79.377%)  route 1.599ns (20.623%))
+  Logic Levels:           3  (LUT3=1 OBUFT=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  RAM_reg/CLKARDCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[3])
+                                                      2.454     2.454 r  RAM_reg/DOADO[3]
+                         net (fo=2, unplaced)         0.800     3.254    RAM_reg_n_12
+                                                                      r  q_a_OBUFT[3]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.150     3.404 r  q_a_OBUFT[3]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.203    q_a_OBUF[3]
+                                                                      r  q_a_OBUFT[3]_inst/I
+                         OBUFT (Prop_obuft_I_O)       3.552     7.756 r  q_a_OBUFT[3]_inst/O
+                         net (fo=0)                   0.000     7.756    q_a[3]
+                                                                      r  q_a[3] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RAM_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            q_a[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.756ns  (logic 6.156ns (79.377%)  route 1.599ns (20.623%))
+  Logic Levels:           3  (LUT3=1 OBUFT=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  RAM_reg/CLKARDCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[5])
+                                                      2.454     2.454 r  RAM_reg/DOADO[5]
+                         net (fo=2, unplaced)         0.800     3.254    RAM_reg_n_10
+                                                                      r  q_a_OBUFT[5]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.150     3.404 r  q_a_OBUFT[5]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.203    q_a_OBUF[5]
+                                                                      r  q_a_OBUFT[5]_inst/I
+                         OBUFT (Prop_obuft_I_O)       3.552     7.756 r  q_a_OBUFT[5]_inst/O
+                         net (fo=0)                   0.000     7.756    q_a[5]
+                                                                      r  q_a[5] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RAM_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            q_a[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.756ns  (logic 6.156ns (79.377%)  route 1.599ns (20.623%))
+  Logic Levels:           3  (LUT3=1 OBUFT=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  RAM_reg/CLKARDCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[7])
+                                                      2.454     2.454 r  RAM_reg/DOADO[7]
+                         net (fo=2, unplaced)         0.800     3.254    RAM_reg_n_8
+                                                                      r  q_a_OBUFT[7]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.150     3.404 r  q_a_OBUFT[7]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.203    q_a_OBUF[7]
+                                                                      r  q_a_OBUFT[7]_inst/I
+                         OBUFT (Prop_obuft_I_O)       3.552     7.756 r  q_a_OBUFT[7]_inst/O
+                         net (fo=0)                   0.000     7.756    q_a[7]
+                                                                      r  q_a[7] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RAM_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            q_b[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.756ns  (logic 6.156ns (79.377%)  route 1.599ns (20.623%))
+  Logic Levels:           3  (LUT3=1 OBUFT=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  RAM_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[1])
+                                                      2.454     2.454 r  RAM_reg/DOBDO[1]
+                         net (fo=2, unplaced)         0.800     3.254    RAM_reg_n_30
+                                                                      r  q_b_OBUFT[1]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.150     3.404 r  q_b_OBUFT[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.203    q_b_OBUF[1]
+                                                                      r  q_b_OBUFT[1]_inst/I
+                         OBUFT (Prop_obuft_I_O)       3.552     7.756 r  q_b_OBUFT[1]_inst/O
+                         net (fo=0)                   0.000     7.756    q_b[1]
+                                                                      r  q_b[1] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RAM_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            q_b[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.756ns  (logic 6.156ns (79.377%)  route 1.599ns (20.623%))
+  Logic Levels:           3  (LUT3=1 OBUFT=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  RAM_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[3])
+                                                      2.454     2.454 r  RAM_reg/DOBDO[3]
+                         net (fo=2, unplaced)         0.800     3.254    RAM_reg_n_28
+                                                                      r  q_b_OBUFT[3]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.150     3.404 r  q_b_OBUFT[3]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.203    q_b_OBUF[3]
+                                                                      r  q_b_OBUFT[3]_inst/I
+                         OBUFT (Prop_obuft_I_O)       3.552     7.756 r  q_b_OBUFT[3]_inst/O
+                         net (fo=0)                   0.000     7.756    q_b[3]
+                                                                      r  q_b[3] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RAM_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            q_b[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.756ns  (logic 6.156ns (79.377%)  route 1.599ns (20.623%))
+  Logic Levels:           3  (LUT3=1 OBUFT=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  RAM_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[5])
+                                                      2.454     2.454 r  RAM_reg/DOBDO[5]
+                         net (fo=2, unplaced)         0.800     3.254    RAM_reg_n_26
+                                                                      r  q_b_OBUFT[5]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.150     3.404 r  q_b_OBUFT[5]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.203    q_b_OBUF[5]
+                                                                      r  q_b_OBUFT[5]_inst/I
+                         OBUFT (Prop_obuft_I_O)       3.552     7.756 r  q_b_OBUFT[5]_inst/O
+                         net (fo=0)                   0.000     7.756    q_b[5]
+                                                                      r  q_b[5] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RAM_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            q_b[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.756ns  (logic 6.156ns (79.377%)  route 1.599ns (20.623%))
+  Logic Levels:           3  (LUT3=1 OBUFT=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  RAM_reg/CLKBWRCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[7])
+                                                      2.454     2.454 r  RAM_reg/DOBDO[7]
+                         net (fo=2, unplaced)         0.800     3.254    RAM_reg_n_24
+                                                                      r  q_b_OBUFT[7]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.150     3.404 r  q_b_OBUFT[7]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.203    q_b_OBUF[7]
+                                                                      r  q_b_OBUFT[7]_inst/I
+                         OBUFT (Prop_obuft_I_O)       3.552     7.756 r  q_b_OBUFT[7]_inst/O
+                         net (fo=0)                   0.000     7.756    q_b[7]
+                                                                      r  q_b[7] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RAM_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            q_a[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.730ns  (logic 6.130ns (79.308%)  route 1.599ns (20.692%))
+  Logic Levels:           3  (LUT3=1 OBUFT=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  RAM_reg/CLKARDCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[0])
+                                                      2.454     2.454 r  RAM_reg/DOADO[0]
+                         net (fo=2, unplaced)         0.800     3.254    RAM_reg_n_15
+                                                                      r  q_a_OBUFT[0]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.124     3.378 r  q_a_OBUFT[0]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.177    q_a_OBUF[0]
+                                                                      r  q_a_OBUFT[0]_inst/I
+                         OBUFT (Prop_obuft_I_O)       3.552     7.730 r  q_a_OBUFT[0]_inst/O
+                         net (fo=0)                   0.000     7.730    q_a[0]
+                                                                      r  q_a[0] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RAM_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            q_a[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.730ns  (logic 6.130ns (79.308%)  route 1.599ns (20.692%))
+  Logic Levels:           3  (LUT3=1 OBUFT=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         RAMB18E1                     0.000     0.000 r  RAM_reg/CLKARDCLK
+                         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[2])
+                                                      2.454     2.454 r  RAM_reg/DOADO[2]
+                         net (fo=2, unplaced)         0.800     3.254    RAM_reg_n_13
+                                                                      r  q_a_OBUFT[2]_inst_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.124     3.378 r  q_a_OBUFT[2]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     4.177    q_a_OBUF[2]
+                                                                      r  q_a_OBUFT[2]_inst/I
+                         OBUFT (Prop_obuft_I_O)       3.552     7.730 r  q_a_OBUFT[2]_inst/O
+                         net (fo=0)                   0.000     7.730    q_a[2]
+                                                                      r  q_a[2] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 q_a_OBUFT[7]_inst_i_3/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            q_a_OBUFT[0]_inst_i_2/CE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.305ns  (logic 0.141ns (46.234%)  route 0.164ns (53.766%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  q_a_OBUFT[7]_inst_i_3/C
+                         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  q_a_OBUFT[7]_inst_i_3/Q
+                         net (fo=16, unplaced)        0.164     0.305    q_a_OBUFT[7]_inst_i_3_n_0
+                         FDRE                                         r  q_a_OBUFT[0]_inst_i_2/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 q_a_OBUFT[7]_inst_i_3/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            q_a_OBUFT[1]_inst_i_2/CE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.305ns  (logic 0.141ns (46.234%)  route 0.164ns (53.766%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  q_a_OBUFT[7]_inst_i_3/C
+                         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  q_a_OBUFT[7]_inst_i_3/Q
+                         net (fo=16, unplaced)        0.164     0.305    q_a_OBUFT[7]_inst_i_3_n_0
+                         FDRE                                         r  q_a_OBUFT[1]_inst_i_2/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 q_a_OBUFT[7]_inst_i_3/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            q_a_OBUFT[2]_inst_i_2/CE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.305ns  (logic 0.141ns (46.234%)  route 0.164ns (53.766%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  q_a_OBUFT[7]_inst_i_3/C
+                         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  q_a_OBUFT[7]_inst_i_3/Q
+                         net (fo=16, unplaced)        0.164     0.305    q_a_OBUFT[7]_inst_i_3_n_0
+                         FDRE                                         r  q_a_OBUFT[2]_inst_i_2/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 q_a_OBUFT[7]_inst_i_3/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            q_a_OBUFT[3]_inst_i_2/CE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.305ns  (logic 0.141ns (46.234%)  route 0.164ns (53.766%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  q_a_OBUFT[7]_inst_i_3/C
+                         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  q_a_OBUFT[7]_inst_i_3/Q
+                         net (fo=16, unplaced)        0.164     0.305    q_a_OBUFT[7]_inst_i_3_n_0
+                         FDRE                                         r  q_a_OBUFT[3]_inst_i_2/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 q_a_OBUFT[7]_inst_i_3/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            q_a_OBUFT[4]_inst_i_2/CE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.305ns  (logic 0.141ns (46.234%)  route 0.164ns (53.766%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  q_a_OBUFT[7]_inst_i_3/C
+                         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  q_a_OBUFT[7]_inst_i_3/Q
+                         net (fo=16, unplaced)        0.164     0.305    q_a_OBUFT[7]_inst_i_3_n_0
+                         FDRE                                         r  q_a_OBUFT[4]_inst_i_2/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 q_a_OBUFT[7]_inst_i_3/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            q_a_OBUFT[5]_inst_i_2/CE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.305ns  (logic 0.141ns (46.234%)  route 0.164ns (53.766%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  q_a_OBUFT[7]_inst_i_3/C
+                         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  q_a_OBUFT[7]_inst_i_3/Q
+                         net (fo=16, unplaced)        0.164     0.305    q_a_OBUFT[7]_inst_i_3_n_0
+                         FDRE                                         r  q_a_OBUFT[5]_inst_i_2/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 q_a_OBUFT[7]_inst_i_3/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            q_a_OBUFT[6]_inst_i_2/CE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.305ns  (logic 0.141ns (46.234%)  route 0.164ns (53.766%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  q_a_OBUFT[7]_inst_i_3/C
+                         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  q_a_OBUFT[7]_inst_i_3/Q
+                         net (fo=16, unplaced)        0.164     0.305    q_a_OBUFT[7]_inst_i_3_n_0
+                         FDRE                                         r  q_a_OBUFT[6]_inst_i_2/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 q_a_OBUFT[7]_inst_i_3/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            q_a_OBUFT[7]_inst_i_4/CE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.305ns  (logic 0.141ns (46.234%)  route 0.164ns (53.766%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  q_a_OBUFT[7]_inst_i_3/C
+                         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  q_a_OBUFT[7]_inst_i_3/Q
+                         net (fo=16, unplaced)        0.164     0.305    q_a_OBUFT[7]_inst_i_3_n_0
+                         FDRE                                         r  q_a_OBUFT[7]_inst_i_4/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 q_b_OBUFT[7]_inst_i_3/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            q_b_OBUFT[0]_inst_i_2/CE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.305ns  (logic 0.141ns (46.234%)  route 0.164ns (53.766%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  q_b_OBUFT[7]_inst_i_3/C
+                         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  q_b_OBUFT[7]_inst_i_3/Q
+                         net (fo=16, unplaced)        0.164     0.305    q_b_OBUFT[7]_inst_i_3_n_0
+                         FDRE                                         r  q_b_OBUFT[0]_inst_i_2/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 q_b_OBUFT[7]_inst_i_3/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            q_b_OBUFT[1]_inst_i_2/CE
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.305ns  (logic 0.141ns (46.234%)  route 0.164ns (53.766%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  q_b_OBUFT[7]_inst_i_3/C
+                         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  q_b_OBUFT[7]_inst_i_3/Q
+                         net (fo=16, unplaced)        0.164     0.305    q_b_OBUFT[7]_inst_i_3_n_0
+                         FDRE                                         r  q_b_OBUFT[1]_inst_i_2/CE
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
